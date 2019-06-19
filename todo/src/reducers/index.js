@@ -1,9 +1,11 @@
 import { ADD_ITEM } from '../actions';
 
 const initialState = {
-    todos: [
-        { value: 'Walk the dog.', completed: false }
-    ]
+    todos: 
+    'Walk the dog.'
+    // [
+    //     { value: 'Walk the dog.', completed: false }
+    // ]
 }
 
 export const reducer = (state = initialState, action) => {
@@ -11,7 +13,7 @@ export const reducer = (state = initialState, action) => {
         case ADD_ITEM:
             return{
                 ...state,
-                value: 
+                todos: action.payload 
             };
         default: 
             return state;
