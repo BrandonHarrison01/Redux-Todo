@@ -20,13 +20,16 @@ class TodosForm extends React.Component {
     }
 
     render() {
+        console.log(this.props.todos)
         return(
             <div>
-                <h1>{this.props.todos}</h1>
+                {this.props.todos.map((todo) => (
+                <h1>{todo.value}</h1>
+                ))}
                 <input
                     type='text'
                     name='newItem'
-                    value={this.state.todos}
+                    value={this.state.newItem}
                     onChange={this.handleChanges}
                 />
                 <button onClick={this.addItem}>Submit</button>
@@ -36,6 +39,7 @@ class TodosForm extends React.Component {
 }
 
 const mapStateToProps = state => {
+    console.log(state.todos)
     return {
         todos: state.todos
     }
