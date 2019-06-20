@@ -2,7 +2,7 @@
   command = "yarn build"
   functions = "functions"
   publish = "todo/build"
-  base = 'todo/'
+  base = 'todo'
 
   [[redirects]]
     from = "/*"
