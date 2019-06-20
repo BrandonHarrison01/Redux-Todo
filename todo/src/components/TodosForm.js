@@ -24,7 +24,7 @@ class TodosForm extends React.Component {
         return(
             <div>
                 {this.props.todos.map((todo) => (
-                <h1>{todo.value}</h1>
+                <h1 key={todo.value}>{todo.value}</h1>
                 ))}
                 <input
                     type='text'
